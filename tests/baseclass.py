@@ -2,12 +2,16 @@ import os
 import sys
 import unittest
 import shlex
-import imputil
 import glob
 import warnings
 import re
 import tempfile
 import shutil
+
+try:
+    from imputil import imp
+except ImportError: # Python 3
+    import imp
 
 from pykickstart.errors import *
 from pykickstart.parser import preprocessFromString, KickstartParser
@@ -65,7 +69,7 @@ class ParserTest(unittest.TestCase):
         """
         try:
             self.parser.readKickstartFromString(ks_string)
-        except Exception, e:
+        except Exception as e:
             self.fail("Failed while parsing commands %s: %s" % (ks_string, e))
 
 
@@ -117,7 +121,7 @@ class CommandTest(unittest.TestCase):
 
         parser = self.getParser(self.command)._getParser()
 
-        for opt in filter(lambda o: not o.deprecated, parser.option_list):
+        for opt in [o for o in parser.option_list if not o.deprecated]:
             self._options.append(opt.get_opt_string())
 
         return self._options
@@ -157,7 +161,7 @@ class CommandTest(unittest.TestCase):
         else:
             try:
                 obj = parser.parse(args[1:])
-            except Exception, e:
+            except Exception as e:
                 self.fail("Failed while parsing: %s" % e)
         return obj
 
@@ -214,8 +218,7 @@ def loadModules(moduleDir, cls_pattern="_TestCase", skip_list=["__init__", "base
 
     # Get a list of all *.py files in moduleDir
     moduleList = []
-    lst = map(lambda x: os.path.splitext(os.path.basename(x))[0],
-              glob.glob(moduleDir + "/*.py"))
+    lst = [os.path.splitext(os.path.basename(x))[0] for x in glob.glob(moduleDir + "/*.py")]
 
     # Inspect each .py file found
     for module in lst:
@@ -224,22 +227,25 @@ def loadModules(moduleDir, cls_pattern="_TestCase", skip_list=["__init__", "base
 
         # Attempt to load the found module.
         try:
-            found = imputil.imp.find_module(module)
-            loaded = imputil.imp.load_module(module, found[0], found[1], found[2])
-        except ImportError, e:
-            print(_("Error loading module %s: %s") % (module, e))
+            found = imp.find_module(module)
+            loaded = imp.load_module(module, found[0], found[1], found[2])
+        except ImportError as e:
+            print((_("Error loading module %s: %s") % (module, e)))
             continue
+        finally:
+            if found[0]:
+                found[0].close()
 
         # Find class names that match the supplied pattern (default: "_TestCase")
         beforeCount = len(tstList)
-        for obj in loaded.__dict__.keys():
+        for obj in list(loaded.__dict__.keys()):
             if obj.endswith(cls_pattern):
                 tstList.append(loaded.__dict__[obj])
         afterCount = len(tstList)
 
         # Warn if no tests found
         if beforeCount == afterCount:
-            print(_("Module %s does not contain any test cases; skipping.") % module)
+            print((_("Module %s does not contain any test cases; skipping.") % module))
             continue
 
     return tstList

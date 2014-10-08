@@ -42,6 +42,7 @@ import gettext
 gettext.textdomain("pykickstart")
 _ = lambda x: gettext.ldgettext("pykickstart", x)
 
+import six
 import types
 import warnings
 from pykickstart.errors import KickstartParseError, formatErrorMsg
@@ -100,7 +101,7 @@ class KickstartCommand(KickstartObject):
         # members from the kwargs list before we start processing it.  This
         # ensures that subclasses don't continue to recognize arguments that
         # were removed.
-        for arg in filter(kwargs.has_key, self.removedKeywords):
+        for arg in (kw for kw in self.removedKeywords if kw in kwargs):
             kwargs.pop(arg)
 
     def __call__(self, *args, **kwargs):
@@ -110,7 +111,7 @@ class KickstartCommand(KickstartObject):
         """
         self.seen = True
 
-        for (key, val) in kwargs.items():
+        for (key, val) in list(kwargs.items()):
             # Ignore setting attributes that were removed in a subclass, as
             # if they were unknown attributes.
             if key in self.removedAttrs:
@@ -144,7 +145,7 @@ class KickstartCommand(KickstartObject):
            list.  This method should be called from __init__ in a subclass,
            but only after the superclass's __init__ method has been called.
         """
-        for attr in filter(lambda k: hasattr(self, k), self.removedAttrs):
+        for attr in [k for k in self.removedAttrs if hasattr(self, k)]:
             delattr(self, attr)
 
     # Set the contents of the opts object (an instance of optparse.Values
@@ -160,7 +161,7 @@ class KickstartCommand(KickstartObject):
     # of objects (like partitions, network devices, etc.) and need to populate
     # a Data object.
     def _setToObj(self, optParser, opts, obj):
-        for key in filter (lambda k: getattr(opts, k) != None, optParser.keys()):
+        for key in [k for k in list(optParser.keys()) if getattr(opts, k) != None]:
             setattr(obj, key, getattr(opts, key))
 
 class DeprecatedCommand(KickstartCommand):
@@ -277,19 +278,19 @@ class BaseHandler(KickstartObject):
 
         retval += "#version=%s\n" % versionToString(self.version)
 
-        lst = self._writeOrder.keys()
+        lst = list(self._writeOrder.keys())
         lst.sort()
 
         for prio in lst:
             for obj in self._writeOrder[prio]:
                 obj_str = obj.__str__()
-                if type(obj_str) == types.UnicodeType:
+                if not six.PY3 and type(obj_str) == six.text_type:
                     obj_str = obj_str.encode("utf-8")
                 retval += obj_str
 
         for script in self.scripts:
             script_str = script.__str__()
-            if type(script_str) == types.UnicodeType:
+            if not six.PY3 and type(script_str) == six.text_type:
                 script_str = script_str.encode("utf-8")
             retval += script_str
 
@@ -323,15 +324,18 @@ class BaseHandler(KickstartObject):
         # way for clients to access the command objects.  We also need to strip
         # off the version part from the front of the name.
         if cmdObj.__class__.__name__.find("_") != -1:
-            name = unicode(cmdObj.__class__.__name__.split("_", 1)[1])
+            name = cmdObj.__class__.__name__.split("_", 1)[1]
         else:
-            name = unicode(cmdObj.__class__.__name__).lower()
+            name = cmdObj.__class__.__name__.lower()
+
+        if not six.PY3:
+            name = unicode(name)
 
         setattr(self, name.lower(), cmdObj)
 
         # Also, add the object into the _writeOrder dict in the right place.
         if cmdObj.writePriority is not None:
-            if self._writeOrder.has_key(cmdObj.writePriority):
+            if cmdObj.writePriority in self._writeOrder:
                 self._insertSorted(self._writeOrder[cmdObj.writePriority], cmdObj)
             else:
                 self._writeOrder[cmdObj.writePriority] = [cmdObj]
@@ -350,13 +354,13 @@ class BaseHandler(KickstartObject):
         else:
             dMap = dataMapping
 
-        if type(commandUpdates) == types.DictType:
+        if type(commandUpdates) == dict:
             cMap.update(commandUpdates)
 
-        if type(dataUpdates) == types.DictType:
+        if type(dataUpdates) == dict:
             dMap.update(dataUpdates)
 
-        for (cmdName, cmdClass) in cMap.iteritems():
+        for (cmdName, cmdClass) in cMap.items():
             # First make sure we haven't instantiated this command handler
             # already.  If we have, we just need to make another mapping to
             # it in self.commands.
@@ -365,7 +369,7 @@ class BaseHandler(KickstartObject):
             # these two code blocks in sync.
             cmdObj = None
 
-            for (_key, val) in self.commands.iteritems():
+            for (_key, val) in self.commands.items():
                 if val.__class__.__name__ == cmdClass.__name__:
                     cmdObj = val
                     break
@@ -382,7 +386,7 @@ class BaseHandler(KickstartObject):
         # We also need to create attributes for the various data objects.
         # No checks here because dMap is a bijection.  At least, that's what
         # the comment says.  Hope no one screws that up.
-        for (dataName, dataClass) in dMap.iteritems():
+        for (dataName, dataClass) in dMap.items():
             setattr(self, dataName, dataClass)
 
     def resetCommand(self, cmdName):
@@ -413,7 +417,7 @@ class BaseHandler(KickstartObject):
         """
         cmd = args[0]
 
-        if not self.commands.has_key(cmd):
+        if cmd not in self.commands:
             raise KickstartParseError(formatErrorMsg(lineno, msg=_("Unknown command: %s" % cmd)))
         elif self.commands[cmd] != None:
             self.commands[cmd].currentCmd = cmd
@@ -437,7 +441,7 @@ class BaseHandler(KickstartObject):
         """
         self._writeOrder = {}
 
-        for (key, _val) in self.commands.iteritems():
+        for (key, _val) in self.commands.items():
             if not key in lst:
                 self.commands[key] = None
 
@@ -476,7 +480,7 @@ class BaseData(KickstartObject):
            keyword arguments.  Valid attributes are anything specified in a
            subclass, but unknown attributes will be ignored.
         """
-        for (key, val) in kwargs.items():
+        for (key, val) in list(kwargs.items()):
             # Ignore setting attributes that were removed in a subclass, as
             # if they were unknown attributes.
             if key in self.removedAttrs:
@@ -490,5 +494,5 @@ class BaseData(KickstartObject):
            list.  This method should be called from __init__ in a subclass,
            but only after the superclass's __init__ method has been called.
         """
-        for attr in filter(lambda k: hasattr(self, k), self.removedAttrs):
+        for attr in [k for k in self.removedAttrs if hasattr(self, k)]:
             delattr(self, attr)

@@ -1,3 +1,4 @@
+import six
 import unittest
 import tempfile
 from tests.baseclass import *
@@ -149,7 +150,7 @@ class VersionToString_TestCase(CommandTest):
         # Make sure DEVEL is the highest version, but RHEL versions aren't
         # counted as devel.
         highest = 0
-        for (ver_str,ver_num) in versionMap.items():
+        for (ver_str,ver_num) in list(versionMap.items()):
             if ver_str.startswith("RHEL"):
                 continue
 
@@ -196,7 +197,7 @@ class returnClassForVersion_TestCase(CommandTest):
 
         # Test that everything in version.versionMap has a handler, except
         # for DEVEL.
-        for (name, vers) in versionMap.iteritems():
+        for (name, vers) in versionMap.items():
             if name == "DEVEL":
                 continue
 
@@ -208,7 +209,7 @@ class returnClassForVersion_TestCase(CommandTest):
             if module.__name__.endswith("Handler") and module.__name__ not in ["BaseHandler"]:
                 # What is the version of the handler?
                 vers = module.__name__.replace("Handler","")
-                self.assertTrue(versionMap.has_key(vers))
+                self.assertTrue(vers in versionMap)
                 # Ensure that returnClassForVersion returns what we expect
                 self.assertEqual(getClassName(returnClassForVersion(versionMap[vers])), getClassName(module))
 
@@ -216,8 +217,8 @@ class versionFromFile_TestCase(CommandTest):
     def runTest(self):
 
         def write_ks_cfg(buf):
-            (fd, name) = tempfile.mkstemp(prefix="ks-", suffix=".cfg", dir="/tmp")
-            os.write(fd, buf)
+            (fd, name) = tempfile.mkstemp(prefix="ks-", suffix=".cfg", dir="/tmp", text=True)
+            os.write(fd, buf if not six.PY3 else buf.encode('utf-8'))
             os.close(fd)
             return name
 

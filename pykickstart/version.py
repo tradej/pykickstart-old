@@ -43,8 +43,13 @@ This module also exports several functions:
                       syntax it uses.  This requires the kickstart file to
                       have a version= comment in it.
 """
-import imputil, re, sys
+import re, sys
 from six.moves.urllib.request import urlopen
+
+try:
+    from imputil import imp
+except ImportError: # Python 3
+    import imp
 
 import gettext
 _ = lambda x: gettext.ldgettext("pykickstart", x)
@@ -105,9 +110,9 @@ def stringToVersion(s):
     m = re.match(r"^fedora.* (\d+)$", s, re.I)
 
     if m and m.group(1):
-        if versionMap.has_key("FC" + m.group(1)):
+        if "FC" + m.group(1) in versionMap:
             return versionMap["FC" + m.group(1)]
-        elif versionMap.has_key("F" + m.group(1)):
+        elif "F" + m.group(1) in versionMap:
             return versionMap["F" + m.group(1)]
         else:
             raise KickstartVersionError(_("Unsupported version specified: %s") % s)
@@ -116,7 +121,7 @@ def stringToVersion(s):
     m = re.match(r"^red hat enterprise linux.* (\d+)([\.\d]*)$", s, re.I)
 
     if m and m.group(1):
-        if versionMap.has_key("RHEL" + m.group(1)):
+        if "RHEL" + m.group(1) in versionMap:
             return versionMap["RHEL" + m.group(1)]
         else:
             raise KickstartVersionError(_("Unsupported version specified: %s") % s)
@@ -132,7 +137,7 @@ def versionToString(version, skipDevel=False):
     if not skipDevel and version == versionMap["DEVEL"]:
         return "DEVEL"
 
-    for (key, val) in versionMap.iteritems():
+    for (key, val) in versionMap.items():
         if key == "DEVEL":
             continue
         elif val == version:
@@ -178,14 +183,17 @@ def returnClassForVersion(version=DEVEL):
     try:
         import pykickstart.handlers
         sys.path.extend(pykickstart.handlers.__path__)
-        found = imputil.imp.find_module(module)
-        loaded = imputil.imp.load_module(module, found[0], found[1], found[2])
+        found = imp.find_module(module)
+        loaded = imp.load_module(module, found[0], found[1], found[2])
 
-        for (k, v) in loaded.__dict__.iteritems():
+        for (k, v) in loaded.__dict__.items():
             if k.lower().endswith("%shandler" % module):
                 return v
     except:
         raise KickstartVersionError(_("Unsupported version specified: %s") % version)
+    finally:
+        if found[0]:
+            found[0].close()
 
 def makeVersion(version=DEVEL):
     """Return a new instance of the syntax handler for version.  version can be
