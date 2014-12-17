@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-16 14:47-0400\n"
+"PO-Revision-Date: 2014-04-22 15:22+0000\n"
+"Last-Translator: clumens <clumens@redhat.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/projects/p/pykickstart/language/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: ../pykickstart/base.py:187
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this command."
+msgstr "تجاهل الأوامر الناقصة في السطر %(lineno)s:  الأمر %(cmd)s يعتبر ناقصاً وليس له أي تأثير.  من المحتمل إزالته من الإصدارات القادمة، والذي سيتسبب في حدوث خطأ فادح من kickstart.  الرجاء تعديل ملف kickstart لحذف هذا الأمر."
+
+#: ../pykickstart/base.py:417
+#, python-format
+msgid "Unknown command: %s"
+msgstr "أمر غير معروف: %s"
+
+#: ../pykickstart/parser.py:85
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "رابط غير قانوني لـ %%ksappend: %s"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Unable to open %%ksappend file: %s"
+msgstr "غير قادر على فتح ملف %%ksappend: %s"
+
+#: ../pykickstart/parser.py:96 ../pykickstart/parser.py:98
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "غير قادر على فتح ملف %%ksappend"
+
+#: ../pykickstart/parser.py:131 ../pykickstart/parser.py:728
+#, python-format
+msgid "Unable to open input kickstart file: %s"
+msgstr "غير قادر على فتح ملف مدخلات kickstart : %s"
+
+#: ../pykickstart/parser.py:367
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "المجموعة لايمكنها تحديد --nodefaults و --optional معاً"
+
+#: ../pykickstart/parser.py:540 ../pykickstart/parser.py:581
+#, python-format
+msgid "Section %s does not end with %%end."
+msgstr ""
+
+#: ../pykickstart/parser.py:674
+#, python-format
+msgid "Unknown kickstart section: %s"
+msgstr ""
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:113 ../pykickstart/version.py:122
+#: ../pykickstart/version.py:125 ../pykickstart/version.py:141
+#: ../pykickstart/version.py:195
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "تم تحديد نسخة غير مدعومة: %s"
+
+#: ../pykickstart/options.py:82
+#, python-format
+msgid "Option %s is required"
+msgstr "الخيار %s مطلوب"
+
+#: ../pykickstart/options.py:86
+#, python-format
+msgid ""
+"The %(option)s option was introduced in version %(intro)s, but you are using"
+" kickstart syntax version %(version)s."
+msgstr "الخيار %(option)s تم عرضه في النسخة %(intro)s، ولكنك تستخدم kickstart صيغة نسخة %(version)s."
+
+#: ../pykickstart/options.py:92
+#, python-format
+msgid "The %(option)s option is no longer supported."
+msgstr "الخيار %(option)s لم يعد معتمداً."
+
+#: ../pykickstart/options.py:94
+#, python-format
+msgid ""
+"The %(option)s option was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s."
+msgstr "الخيار %(option)s تمت إزالته من النسخة %(removed)s, ولكنك تستخدم kickstart صيغة نسخة %(version)s"
+
+#: ../pykickstart/options.py:97
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this option."
+msgstr "تجاهل الأوامر الناقصة في السطر %(lineno)s:  الأمر %(option)s يعتبر ناقصاً وليس له أي تأثير.  من المحتمل إزالته من الإصدارات القادمة، والذي سيتسبب في حدوث خطأ فادح من kickstart.  الرجاء تعديل ملف  kickstart لحذف هذا الأمر."
+
+#: ../pykickstart/options.py:136
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "الخيار %(opt)s: قيمة منطقية غير صالحة: %(value)r"
+
+#: ../pykickstart/options.py:141
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "الخيار %(opt)s: قيمة سلسلة غير صالحة: %(value)r"
+
+#: ../pykickstart/options.py:178
+msgid "Required flag set for option that doesn't take a value"
+msgstr "تم تعيين العلامة المطلوبة للخيار الذي لايأخذ قيمة"
+
+#: ../pykickstart/sections.py:251
+msgid "--default and --nobase cannot be used together"
+msgstr ""
+
+#: ../pykickstart/sections.py:253
+msgid "--default and --nocore cannot be used together"
+msgstr ""
+
+#: ../pykickstart/errors.py:46
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr "حدثت المشكلة التالية في السطر %(lineno)s من ملف kickstart :\n\n%(msg)s\n"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr "كانت هناك مشكلة في القراءة في السطر %s من ملف kickstart"
+
+#: ../tools/ksflatten:37
+msgid "Path to kickstart config file"
+msgstr ""
+
+#: ../tools/ksflatten:39
+msgid "Kickstart version to use for interpreting config"
+msgstr ""
+
+#: ../tools/ksflatten:41
+msgid "Write flattened config to OUTPUT"
+msgstr ""
+
+#: ../tools/ksflatten:48
+msgid "Need to specify a config to flatten"
+msgstr ""
+
+#: ../tools/ksflatten:56
+#, python-format
+msgid "Failed to read kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:59
+#, python-format
+msgid "Failed to parse kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:65
+#, python-format
+msgid "Failed to open output file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksshell:147
+msgid "a basis file to use for seeding the kickstart data (optional)"
+msgstr ""
+
+#: ../tools/ksshell:149
+msgid ""
+"the location to write the finished kickstart file, or stdout if not given"
+msgstr ""
+
+#: ../tools/ksshell:151 ../tools/ksvalidator:61
+msgid "version of kickstart syntax to validate against"
+msgstr "نسخة صيغة الـ kickstart التي سيتم مقابلتها للتحقق"
+
+#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:81
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "النسخة %s غير مدعومة من pykickstart"
+
+#. Errors should just dump you to the prompt anyway.
+#: ../tools/ksshell:174
+#, python-format
+msgid ""
+"Warning:  The following error occurred when processing the input file:\n"
+"%s\n"
+msgstr ""
+
+#: ../tools/ksshell:219
+#, python-format
+msgid "Internal command %s not recognized."
+msgstr ""
+
+#: ../tools/ksverdiff:49 ../tools/ksvalidator:59
+msgid "list the available versions of kickstart syntax"
+msgstr "عرض النسخ المتوفرة من صيغة kickstart"
+
+#: ../tools/ksverdiff:60
+msgid "You must specify two syntax versions."
+msgstr "يجب أن تحدد نسختين من الصيغ"
+
+#: ../tools/ksverdiff:74
+#, python-format
+msgid "The following commands were removed in %s:"
+msgstr "تمت إزالة الأوامر التالية في %s:"
+
+#: ../tools/ksverdiff:77
+#, python-format
+msgid "The following commands were deprecated in %s:"
+msgstr "الأوامر التالية ناقصة في %s:"
+
+#: ../tools/ksverdiff:80
+#, python-format
+msgid "The following commands were added in %s:"
+msgstr "تم إضافة الأوامر التالية في %s:"
+
+#: ../tools/ksverdiff:106
+#, python-format
+msgid "The following options were added to the %s command in %s:"
+msgstr "تم إضافة الخيارات التالية للأمر %s في %s:"
+
+#: ../tools/ksverdiff:111
+#, python-format
+msgid "The following options were deprecated from the %s command in %s:"
+msgstr "الخيارات التالية ناقصة من الأمر %s في %s:"
+
+#: ../tools/ksverdiff:116
+#, python-format
+msgid "The following options were removed from the %s command in %s:"
+msgstr "الخيارات التالية تمت إزالتها من الأمر %s في %s:"
+
+#: ../tools/ksvalidator:51
+msgid "filename or URL to read from"
+msgstr ""
+
+#: ../tools/ksvalidator:53
+msgid "halt after the first error or warning"
+msgstr "توقف بعد أول خطأ أو تحذير"
+
+#: ../tools/ksvalidator:56
+#, python-format
+msgid "parse include files when %%include is seen"
+msgstr ""
+
+#: ../tools/ksvalidator:75
+#, python-format
+msgid ""
+"Error reading %s:\n"
+"%s"
+msgstr "خطأ في قراءة %s:\n%s"
+
+#: ../tools/ksvalidator:97
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr "يستخدم الملف خياراً أو أمراً ناقص.\n%s"
+
+#: ../tools/ksvalidator:103
+msgid "General kickstart error in input file"
+msgstr "خطأ عام kickstart في ملف الإدخال"
+
+#: ../tools/ksvalidator:106
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "خطأ عام في ملف الإدخال:  %s"

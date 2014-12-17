@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Mike Karas <zoliqe@gmail.com>, 2007
+# feonsu <feonsu@gmail.com>, 2008, 2010
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-16 14:47-0400\n"
+"PO-Revision-Date: 2014-04-22 15:22+0000\n"
+"Last-Translator: clumens <clumens@redhat.com>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/pykickstart/language/sk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../pykickstart/base.py:187
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this command."
+msgstr "Zastaraný príkaz na riadku %(lineno)s bude ignorovaný: Príkaz %(cmd)s sa už nepoužíva  a viac už nemá žiaden efekt. Z novších vydaní môže byť odstránený, čo spôsobí úplné zlyhanie kickstart-u. Prosím opravte Váš kickstart súbor odstránením tohoto zastaraného príkazu."
+
+#: ../pykickstart/base.py:417
+#, python-format
+msgid "Unknown command: %s"
+msgstr "Neznámy príkaz: %s"
+
+#: ../pykickstart/parser.py:85
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "Neplatné url pre %%ksappend: %s"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Unable to open %%ksappend file: %s"
+msgstr "Nepodarilo sa otvoriť %%ksappend súbor: %s"
+
+#: ../pykickstart/parser.py:96 ../pykickstart/parser.py:98
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "Nepodarilo sa otvoriť %%ksappend súbor"
+
+#: ../pykickstart/parser.py:131 ../pykickstart/parser.py:728
+#, python-format
+msgid "Unable to open input kickstart file: %s"
+msgstr "Nepodarilo sa otvoriť vstupný kickstart súbor: %s"
+
+#: ../pykickstart/parser.py:367
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "Skupina nemôže mať zároveň, --nodefaults a --optional"
+
+#: ../pykickstart/parser.py:540 ../pykickstart/parser.py:581
+#, python-format
+msgid "Section %s does not end with %%end."
+msgstr ""
+
+#: ../pykickstart/parser.py:674
+#, python-format
+msgid "Unknown kickstart section: %s"
+msgstr ""
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:113 ../pykickstart/version.py:122
+#: ../pykickstart/version.py:125 ../pykickstart/version.py:141
+#: ../pykickstart/version.py:195
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "Špecifikovaná nepodporovaná verzia: %s"
+
+#: ../pykickstart/options.py:82
+#, python-format
+msgid "Option %s is required"
+msgstr "Voľba %s je vyžadovaná"
+
+#: ../pykickstart/options.py:86
+#, python-format
+msgid ""
+"The %(option)s option was introduced in version %(intro)s, but you are using"
+" kickstart syntax version %(version)s."
+msgstr "Voľba %(option)s bola zavedená vo verzií %(intro)s, ale vy používate kickstart syntax verzie %(version)s."
+
+#: ../pykickstart/options.py:92
+#, python-format
+msgid "The %(option)s option is no longer supported."
+msgstr "Voľba %(option)s už nie je podporovaná."
+
+#: ../pykickstart/options.py:94
+#, python-format
+msgid ""
+"The %(option)s option was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s."
+msgstr "Voľba %(option)s bola odstránená vo verzií %(removed)s, ale vy používate kickstart syntax verzie %(version)s."
+
+#: ../pykickstart/options.py:97
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this option."
+msgstr "Zastaraná voľba na riadku %(lineno)s bude ignorovaná: Voľba %(option)s sa už nepoužíva  a viac už nemá žiaden význam. Z novších vydaní môže byť odstránená, čo spôsobí úplné zlyhanie kickstart-u. Prosím opravte Váš kickstart súbor odstránením tejto voľby."
+
+#: ../pykickstart/options.py:136
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "Voľba %(opt)s: nesprávna logická hodnota: %(value)r"
+
+#: ../pykickstart/options.py:141
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "Voľba %(opt)s: nesprávna hodnota reťazca: %(value)r"
+
+#: ../pykickstart/options.py:178
+msgid "Required flag set for option that doesn't take a value"
+msgstr "Požadovaný prepínač pre voľbu nemá žiadnu hodnotu"
+
+#: ../pykickstart/sections.py:251
+msgid "--default and --nobase cannot be used together"
+msgstr ""
+
+#: ../pykickstart/sections.py:253
+msgid "--default and --nocore cannot be used together"
+msgstr ""
+
+#: ../pykickstart/errors.py:46
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr "Vyskytol sa následujúci problém na riadku %(lineno)s kickstart súboru:\n\n%(msg)s\n"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr "Nastal problém pri čítaní riadku %s z kickstart súboru"
+
+#: ../tools/ksflatten:37
+msgid "Path to kickstart config file"
+msgstr ""
+
+#: ../tools/ksflatten:39
+msgid "Kickstart version to use for interpreting config"
+msgstr ""
+
+#: ../tools/ksflatten:41
+msgid "Write flattened config to OUTPUT"
+msgstr ""
+
+#: ../tools/ksflatten:48
+msgid "Need to specify a config to flatten"
+msgstr ""
+
+#: ../tools/ksflatten:56
+#, python-format
+msgid "Failed to read kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:59
+#, python-format
+msgid "Failed to parse kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:65
+#, python-format
+msgid "Failed to open output file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksshell:147
+msgid "a basis file to use for seeding the kickstart data (optional)"
+msgstr ""
+
+#: ../tools/ksshell:149
+msgid ""
+"the location to write the finished kickstart file, or stdout if not given"
+msgstr ""
+
+#: ../tools/ksshell:151 ../tools/ksvalidator:61
+msgid "version of kickstart syntax to validate against"
+msgstr "verzia kickstart syntaxe oproti ktorej validovať"
+
+#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:81
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "Verzia %s nie je podporovaná pykickstart-om"
+
+#. Errors should just dump you to the prompt anyway.
+#: ../tools/ksshell:174
+#, python-format
+msgid ""
+"Warning:  The following error occurred when processing the input file:\n"
+"%s\n"
+msgstr ""
+
+#: ../tools/ksshell:219
+#, python-format
+msgid "Internal command %s not recognized."
+msgstr ""
+
+#: ../tools/ksverdiff:49 ../tools/ksvalidator:59
+msgid "list the available versions of kickstart syntax"
+msgstr "vypísať dostupné verzie kickstart syntaxe"
+
+#: ../tools/ksverdiff:60
+msgid "You must specify two syntax versions."
+msgstr "Musíte zadať dve verzie syntaxe."
+
+#: ../tools/ksverdiff:74
+#, python-format
+msgid "The following commands were removed in %s:"
+msgstr "Nasledujúce príkazy v %s boli odstránené:"
+
+#: ../tools/ksverdiff:77
+#, python-format
+msgid "The following commands were deprecated in %s:"
+msgstr "Nasledujúce príkazy v %s sú zastarané:"
+
+#: ../tools/ksverdiff:80
+#, python-format
+msgid "The following commands were added in %s:"
+msgstr "Nasledujúce príkazy boli do %s pridané:"
+
+#: ../tools/ksverdiff:106
+#, python-format
+msgid "The following options were added to the %s command in %s:"
+msgstr "Nasledujúce voľby pre príkaz %s boli v %s pridané:"
+
+#: ../tools/ksverdiff:111
+#, python-format
+msgid "The following options were deprecated from the %s command in %s:"
+msgstr "Nasledujúce voľby sú pre príkaz %s zastarané v %s:"
+
+#: ../tools/ksverdiff:116
+#, python-format
+msgid "The following options were removed from the %s command in %s:"
+msgstr "Nasledujúce voľby pre príkaz %s boli v %s odstránené:"
+
+#: ../tools/ksvalidator:51
+msgid "filename or URL to read from"
+msgstr ""
+
+#: ../tools/ksvalidator:53
+msgid "halt after the first error or warning"
+msgstr "zastaviť po prvej chybe alebo varovaní"
+
+#: ../tools/ksvalidator:56
+#, python-format
+msgid "parse include files when %%include is seen"
+msgstr ""
+
+#: ../tools/ksvalidator:75
+#, python-format
+msgid ""
+"Error reading %s:\n"
+"%s"
+msgstr "Chyba pri čítaní %s:\n%s"
+
+#: ../tools/ksvalidator:97
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr "Súbor používa zastaranú voľbu alebo príkaz.\n%s"
+
+#: ../tools/ksvalidator:103
+msgid "General kickstart error in input file"
+msgstr "Všeobecná chyba kickstart-u vo vstupnom súbore"
+
+#: ../tools/ksvalidator:106
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "Všeobecná chyba vo vstupnom súbore: %s"

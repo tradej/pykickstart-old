@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008
+# Manoj Kumar Giri <mgiri@redhat.com>, 2011
+# Subhransu Behera <arya_subhransu@yahoo.co.in>, 2007
+# Subhransu Behera <sbehera@redhat.com>, 2006, 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-16 14:47-0400\n"
+"PO-Revision-Date: 2014-04-22 15:22+0000\n"
+"Last-Translator: clumens <clumens@redhat.com>\n"
+"Language-Team: Oriya (http://www.transifex.com/projects/p/pykickstart/language/or/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: or\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../pykickstart/base.py:187
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this command."
+msgstr "%(lineno)s ଲାଇନରେ ଥିବା ଅନାବଶ୍ଯକ ପସନ୍ଦକୁ ଆଗ୍ରହ୍ଯ କରୁଅଛି:  %(cmd)s ନିର୍ଦ୍ଦେଶକୁ ନାପସନ୍ଦ କରାଯାଇଛି ଏବଂ ଏବେ ଏହାର କୌଣସି ପ୍ରଭାବନାହିଁ।  ଏହା ଭବିଷ୍ଯତ ସଂସ୍କରଣ ମାନଙ୍କରେ କାଢି ଦିଆଯାଇ ପାରେ, ଯାହାକି କିକ-ଷ୍ଟାର୍ଟରେ ଗୋଟିଏ ମାରାତ୍ମକ ତୃଟି ସୃଷ୍ଟି କରିପାରେ।  ଏହି ପସନ୍ଦକୁ କାଢିବା ପାଇଁ ଦୟାକରି ଆପଣଙ୍କ କିକ-ଷ୍ଟାର୍ଟ ଫାଇଲକୁ ବଦଳାନ୍ତୁ।"
+
+#: ../pykickstart/base.py:417
+#, python-format
+msgid "Unknown command: %s"
+msgstr "ଅଜ୍ଞାତ ନିର୍ଦ୍ଦେଶ: %s"
+
+#: ../pykickstart/parser.py:85
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "%%ksappend ପାଇଁ ଅବୈଧ ୟୁ.ଆର.ଏଲ.: %s"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Unable to open %%ksappend file: %s"
+msgstr "%%ksappend ଫାଇଲକୁ ଖୋଲିବାରେ ଅସମର୍ଥ: %s"
+
+#: ../pykickstart/parser.py:96 ../pykickstart/parser.py:98
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "%%ksappend ଫାଇଲକୁ ଖୋଲିବାରେ ଅସମର୍ଥ"
+
+#: ../pykickstart/parser.py:131 ../pykickstart/parser.py:728
+#, python-format
+msgid "Unable to open input kickstart file: %s"
+msgstr "%%ksappend ଫାଇଲକୁ ଖୋଲିବାରେ ଅସମର୍ଥ: %s"
+
+#: ../pykickstart/parser.py:367
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "ସମୂହ ଉଭୟ --nodefaults ଏବଂ --optional କୁ ଉଲ୍ଲେଖ କରିପାରିବ ନାହିଁ"
+
+#: ../pykickstart/parser.py:540 ../pykickstart/parser.py:581
+#, python-format
+msgid "Section %s does not end with %%end."
+msgstr ""
+
+#: ../pykickstart/parser.py:674
+#, python-format
+msgid "Unknown kickstart section: %s"
+msgstr ""
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:113 ../pykickstart/version.py:122
+#: ../pykickstart/version.py:125 ../pykickstart/version.py:141
+#: ../pykickstart/version.py:195
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "ଅସମର୍ଥିତ ସଂସ୍କରଣ ଉଲ୍ଲେଖ କରାଯାଇଛି: %s"
+
+#: ../pykickstart/options.py:82
+#, python-format
+msgid "Option %s is required"
+msgstr "%s ପସନ୍ଦ ଟି ଆବଶ୍ଯକ"
+
+#: ../pykickstart/options.py:86
+#, python-format
+msgid ""
+"The %(option)s option was introduced in version %(intro)s, but you are using"
+" kickstart syntax version %(version)s."
+msgstr "%(option)s ବିକଳ୍ପକୁ ସଂସ୍କରଣ %(intro)s ରେ ପ୍ରାରମ୍ଭ କରାଯାଇଥିଲା, କିନ୍ତୁ ଆପଣ କିକ-ଷ୍ଟାର୍ଟ ବାକ୍ଯବିନ୍ଯାସ %(version)s ବ୍ଯବହାର କରୁଛନ୍ତି।"
+
+#: ../pykickstart/options.py:92
+#, python-format
+msgid "The %(option)s option is no longer supported."
+msgstr "%(option)s ବିକଳ୍ପ ବର୍ତ୍ତମାନ ସମର୍ଥିତ ନୁହଁ।"
+
+#: ../pykickstart/options.py:94
+#, python-format
+msgid ""
+"The %(option)s option was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s."
+msgstr "%(option)s ବିକଳ୍ପକୁ ସଂସ୍କରଣ %(removed)s ରେ କଢ଼ାଯାଇଥିଲା, କିନ୍ତୁ ଆପଣ କିକ-ଷ୍ଟାର୍ଟ ବାକ୍ଯବିନ୍ଯାସ %(version)s ବ୍ଯବହାର କରୁଛନ୍ତି।"
+
+#: ../pykickstart/options.py:97
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this option."
+msgstr "%(lineno)s ଲାଇନରେ ଥିବା ଅଦରକାରି ପସନ୍ଦକୁ ଆଗ୍ରହ୍ଯ କରୁଅଛି: %(option)s ପସନ୍ଦଟି ଅଦରକାରି ଅଟେ ଏବଂ ଏବେ ଏହାର କୌଣସି ପ୍ରଭାବନାହିଁ। ଏହା ଭବିଷ୍ଯତ ସଂସ୍କରଣ ମାନଙ୍କରେ କାଢି ଦିଆ ଯାଇପାରେ, ଯାହାକି କିକଷ୍ଟାର୍ଟରେ ଗୋଟିଏ ମାରାତ୍ମକ ତୃଟି ସୃଷ୍ଟି କରିପାରେଏହି ପସନ୍ଦକୁ କାଢିବା ପାଇଁ ଦୟାକରି ଆପଣଙ୍କ କିକଷ୍ଟାର୍ଟ ଫାଇଲକୁ ରୂପାନ୍ତର କରନ୍ତୁ।"
+
+#: ../pykickstart/options.py:136
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "ପସନ୍ଦ %(opt)s: ଅବୈଧ ବୁଲିଆନ ମୂଲ୍ଯ: %(value)r"
+
+#: ../pykickstart/options.py:141
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "ବିକଳ୍ପ %(opt)s: ଅବୈଧ ବାକ୍ୟଖଣ୍ଡ ମୂଲ୍ଯ: %(value)r"
+
+#: ../pykickstart/options.py:178
+msgid "Required flag set for option that doesn't take a value"
+msgstr "ଯେଉଁ ପସନ୍ଦ ଗୁଡିକ କୌଣସି ମୂଲ୍ଯ ଗ୍ରହଣ କରନ୍ତି ନାହିଁ ତାଙ୍କ ପାଇଁ ବିଶେଷ ସୂଚକ ସେଟ କରିବା ଆବଶ୍ଯକ"
+
+#: ../pykickstart/sections.py:251
+msgid "--default and --nobase cannot be used together"
+msgstr ""
+
+#: ../pykickstart/sections.py:253
+msgid "--default and --nocore cannot be used together"
+msgstr ""
+
+#: ../pykickstart/errors.py:46
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr "କିକଷ୍ଟାର୍ଟ ଫାଇଲର %(lineno)s ଲାଇନରେ ନିମ୍ନଲିଖିତ ସମସ୍ଯା ଦେଖାଦେଲା:\n\n%(msg)s\n"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr "କିକଷ୍ଟାର୍ଟ ଫାଇଲ ର %s ଲାଇନ ରେ ପଢିବା ସମୟ ରେ ତୃଟି"
+
+#: ../tools/ksflatten:37
+msgid "Path to kickstart config file"
+msgstr ""
+
+#: ../tools/ksflatten:39
+msgid "Kickstart version to use for interpreting config"
+msgstr ""
+
+#: ../tools/ksflatten:41
+msgid "Write flattened config to OUTPUT"
+msgstr ""
+
+#: ../tools/ksflatten:48
+msgid "Need to specify a config to flatten"
+msgstr ""
+
+#: ../tools/ksflatten:56
+#, python-format
+msgid "Failed to read kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:59
+#, python-format
+msgid "Failed to parse kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:65
+#, python-format
+msgid "Failed to open output file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksshell:147
+msgid "a basis file to use for seeding the kickstart data (optional)"
+msgstr ""
+
+#: ../tools/ksshell:149
+msgid ""
+"the location to write the finished kickstart file, or stdout if not given"
+msgstr ""
+
+#: ../tools/ksshell:151 ../tools/ksvalidator:61
+msgid "version of kickstart syntax to validate against"
+msgstr "ଏହା ବିରୋଧରେ ବୈଧିକୃତ କରାଯିବା କିକ-ଷ୍ଟାର୍ଟର ସଂସ୍କରଣ"
+
+#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:81
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "%s ସଂସ୍କରଣ pykickstart ଦ୍ବାରା ସମର୍ଥିତ ନୁହେଁ"
+
+#. Errors should just dump you to the prompt anyway.
+#: ../tools/ksshell:174
+#, python-format
+msgid ""
+"Warning:  The following error occurred when processing the input file:\n"
+"%s\n"
+msgstr ""
+
+#: ../tools/ksshell:219
+#, python-format
+msgid "Internal command %s not recognized."
+msgstr ""
+
+#: ../tools/ksverdiff:49 ../tools/ksvalidator:59
+msgid "list the available versions of kickstart syntax"
+msgstr "ଉପଲବ୍ଧ କିକ-ଷ୍ଟାର୍ଟର ସଂସ୍କରଣର ବାକ୍ୟବିନ୍ୟାସକୁ ତାଲିକାଭୁକ୍ତ କରନ୍ତୁ"
+
+#: ../tools/ksverdiff:60
+msgid "You must specify two syntax versions."
+msgstr "ଆପଣଙ୍କୁ ନିଶ୍ଚିତ ଭାବରେ ଦୁଇଟି ବାକ୍ୟବିନ୍ୟାସ ସଂସ୍କରଣ ଉଲ୍ଲେଖ କରିବା ଉଚିତ।"
+
+#: ../tools/ksverdiff:74
+#, python-format
+msgid "The following commands were removed in %s:"
+msgstr "%s ରେ ନିମ୍ନଲିଖିତ ନିର୍ଦ୍ଦେଶଗୁଡ଼ିକୁ କଢ଼ାଯାଇଛି:"
+
+#: ../tools/ksverdiff:77
+#, python-format
+msgid "The following commands were deprecated in %s:"
+msgstr "ନିମ୍ନଲିଖିତ ନିର୍ଦ୍ଦେଶଗୁଡ଼ିକ %s ରେ ପୁରୁଣା ହୋଇଯାଇଛି:"
+
+#: ../tools/ksverdiff:80
+#, python-format
+msgid "The following commands were added in %s:"
+msgstr "ନିମ୍ନଲିଖିତ ନିର୍ଦ୍ଦେଶଗୁଡ଼ିକ %s ରେ ଯୋଡ଼ା ଯାଇଛି:"
+
+#: ../tools/ksverdiff:106
+#, python-format
+msgid "The following options were added to the %s command in %s:"
+msgstr "ନିମ୍ନଲିଖିତ ବିକଳ୍ପଗୁଡ଼ିକ %s ରେ ଥିବା %s ନିର୍ଦ୍ଦେଶ ସହିତ ଯୋଗ କରାଯାଇଛି:"
+
+#: ../tools/ksverdiff:111
+#, python-format
+msgid "The following options were deprecated from the %s command in %s:"
+msgstr "ନିମ୍ନଲିଖିତ ବିକଳ୍ପଗୁଡ଼ିକ %s ରେ ଥିବା %s ନିର୍ଦ୍ଦେଶରେ ପୁରୁଣା ହୋଇଯାଇଛି:"
+
+#: ../tools/ksverdiff:116
+#, python-format
+msgid "The following options were removed from the %s command in %s:"
+msgstr "ନିମ୍ନଲିଖିତ ବିକଳ୍ପଗୁଡ଼ିକ %s ରେ ଥିବା %s ନିର୍ଦ୍ଦେଶରୁ କଢ଼ାଯାଇଛି:"
+
+#: ../tools/ksvalidator:51
+msgid "filename or URL to read from"
+msgstr ""
+
+#: ../tools/ksvalidator:53
+msgid "halt after the first error or warning"
+msgstr "ସର୍ବପ୍ରଥମ ତୃଟି କିମ୍ବା ଚେତାବନୀ ପରେ କିଛି କ୍ଷଣ ବିରାମ ଦିଅ"
+
+#: ../tools/ksvalidator:56
+#, python-format
+msgid "parse include files when %%include is seen"
+msgstr ""
+
+#: ../tools/ksvalidator:75
+#, python-format
+msgid ""
+"Error reading %s:\n"
+"%s"
+msgstr "%s କୁ ପଢ଼ିବାରେ ତ୍ରୁଟି:\n%s"
+
+#: ../tools/ksvalidator:97
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr "ଫାଇଲ ଟି ଗୋଟିଏ ଅଦରକାରି ପସନ୍ଦ କିମ୍ବା ନିର୍ଦ୍ଦେଶ କୁ ବ୍ଯବହାର କରୁଅଛି। \n%s"
+
+#: ../tools/ksvalidator:103
+msgid "General kickstart error in input file"
+msgstr "ନିବେଶ ଫାଇଲ ରେ ସାଧାରଣ କିକଷ୍ଟାର୍ଟ ତୃଟି"
+
+#: ../tools/ksvalidator:106
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "ନିବେଶ ଫାଇଲ ରେ ସାଧାରଣ ତୃଟି:  %s"

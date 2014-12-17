@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2006
+# eukim <eukim@redhat.com>, 2006, 2007, 2008
+# eukim <eukim@redhat.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-16 14:47-0400\n"
+"PO-Revision-Date: 2014-04-22 15:22+0000\n"
+"Last-Translator: clumens <clumens@redhat.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/pykickstart/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../pykickstart/base.py:187
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this command."
+msgstr "%(lineno)s 번째 줄에서 앞으로 삭제될 명령은 무시됩니다.  %(cmd)s 명령은 삭제되었으며 더이상 아무런 효과를 가지고 있지 않습니다.  킥스타트에서 치명적인 오류를 가져오는 이 명령은 다음 배포판부터 완전히 삭제될 것입니다. 이 명령을 제거하기 위해 킥스타트 파일을 수정해 주시기 바랍니다."
+
+#: ../pykickstart/base.py:417
+#, python-format
+msgid "Unknown command: %s"
+msgstr "알 수 없는 명령: %s"
+
+#: ../pykickstart/parser.py:85
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "%%ksappend의 잘못된 URL: %s"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Unable to open %%ksappend file: %s"
+msgstr "%%ksappend 파일을 열 수 없음: %s"
+
+#: ../pykickstart/parser.py:96 ../pykickstart/parser.py:98
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "%%ksappend 파일을 열 수 없음"
+
+#: ../pykickstart/parser.py:131 ../pykickstart/parser.py:728
+#, python-format
+msgid "Unable to open input kickstart file: %s"
+msgstr "지정된 kickstart 파일을 열 수 없음: %s"
+
+#: ../pykickstart/parser.py:367
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "그룹은 --nodefaults 및 --optional을 지정할 수 없음"
+
+#: ../pykickstart/parser.py:540 ../pykickstart/parser.py:581
+#, python-format
+msgid "Section %s does not end with %%end."
+msgstr "섹션 %s은(는) %%end로 종료하지 않습니다. "
+
+#: ../pykickstart/parser.py:674
+#, python-format
+msgid "Unknown kickstart section: %s"
+msgstr "알 수 없는 kickstart 섹션: %s"
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:113 ../pykickstart/version.py:122
+#: ../pykickstart/version.py:125 ../pykickstart/version.py:141
+#: ../pykickstart/version.py:195
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "지원되지 않는 버전 지정: %s"
+
+#: ../pykickstart/options.py:82
+#, python-format
+msgid "Option %s is required"
+msgstr "옵션 %s가 필요"
+
+#: ../pykickstart/options.py:86
+#, python-format
+msgid ""
+"The %(option)s option was introduced in version %(intro)s, but you are using"
+" kickstart syntax version %(version)s."
+msgstr "%(option)s 옵션은 버전 %(intro)s에서 소개되었지만  kickstart 구문 버전 %(version)s을(를) 사용하고 있습니다. "
+
+#: ../pykickstart/options.py:92
+#, python-format
+msgid "The %(option)s option is no longer supported."
+msgstr "옵션 %(option)s 는 더이상 지원되지 않습니다."
+
+#: ../pykickstart/options.py:94
+#, python-format
+msgid ""
+"The %(option)s option was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s."
+msgstr "%(option)s 옵션은 버전 %(removed)s에서 제거되었지만 kickstart 구문 버전 %(version)s을(를) 사용하고 있습니다. "
+
+#: ../pykickstart/options.py:97
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future"
+" releases, which will result in a fatal error from kickstart.  Please modify"
+" your kickstart file to remove this option."
+msgstr "%(lineno)s 번째 줄에서 앞으로 삭제될 옵션은 무시됩니다.  %(option)s 옵션은 삭제되었으며 더이상 아무런 효과를 가지고 있지 않습니다.  킥스타트에서 치명적인 오류를 가져오는 이 옵션은 다음 배포판부터 완전히 삭제될 것입니다. 이 옵션을 제거하기 위해 킥스타트 파일을 수정해 주시기 바랍니다."
+
+#: ../pykickstart/options.py:136
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "옵션 %(opt)s: 유효하지 않은 부울(boolean) 값: %(value)r"
+
+#: ../pykickstart/options.py:141
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "옵션 %(opt)s: 유효하지 않은 문자열 값: %(value)r "
+
+#: ../pykickstart/options.py:178
+msgid "Required flag set for option that doesn't take a value"
+msgstr "값을 가지지 않는 옵션을 위해 사용되는 플래그 모음이 필요"
+
+#: ../pykickstart/sections.py:251
+msgid "--default and --nobase cannot be used together"
+msgstr ""
+
+#: ../pykickstart/sections.py:253
+msgid "--default and --nocore cannot be used together"
+msgstr ""
+
+#: ../pykickstart/errors.py:46
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr "킥스타트 파일의 %(lineno)s번째 줄에서 다음과 같은 문제 발생:\n\n%(msg)s\n"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr "킥스타트파일의 %s번째 줄을 읽는데 문제 발생"
+
+#: ../tools/ksflatten:37
+msgid "Path to kickstart config file"
+msgstr ""
+
+#: ../tools/ksflatten:39
+msgid "Kickstart version to use for interpreting config"
+msgstr ""
+
+#: ../tools/ksflatten:41
+msgid "Write flattened config to OUTPUT"
+msgstr ""
+
+#: ../tools/ksflatten:48
+msgid "Need to specify a config to flatten"
+msgstr ""
+
+#: ../tools/ksflatten:56
+#, python-format
+msgid "Failed to read kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:59
+#, python-format
+msgid "Failed to parse kickstart file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksflatten:65
+#, python-format
+msgid "Failed to open output file '%s' : %s"
+msgstr ""
+
+#: ../tools/ksshell:147
+msgid "a basis file to use for seeding the kickstart data (optional)"
+msgstr ""
+
+#: ../tools/ksshell:149
+msgid ""
+"the location to write the finished kickstart file, or stdout if not given"
+msgstr ""
+
+#: ../tools/ksshell:151 ../tools/ksvalidator:61
+msgid "version of kickstart syntax to validate against"
+msgstr "확인을 위한 킥스타트 구문의 버전"
+
+#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:81
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "버전 %s은 pykickstart에 의해 지원되지 않습니다"
+
+#. Errors should just dump you to the prompt anyway.
+#: ../tools/ksshell:174
+#, python-format
+msgid ""
+"Warning:  The following error occurred when processing the input file:\n"
+"%s\n"
+msgstr ""
+
+#: ../tools/ksshell:219
+#, python-format
+msgid "Internal command %s not recognized."
+msgstr ""
+
+#: ../tools/ksverdiff:49 ../tools/ksvalidator:59
+msgid "list the available versions of kickstart syntax"
+msgstr "사용 가능한 kickstart 구문 목록을 표시합니다."
+
+#: ../tools/ksverdiff:60
+msgid "You must specify two syntax versions."
+msgstr "두 가지 구문 버전을 지정해야 합니다. "
+
+#: ../tools/ksverdiff:74
+#, python-format
+msgid "The following commands were removed in %s:"
+msgstr "다음 명령은 %s에서 제거되었습니다:  "
+
+#: ../tools/ksverdiff:77
+#, python-format
+msgid "The following commands were deprecated in %s:"
+msgstr "다음 명령은 %s에서 삭제되었습니다: "
+
+#: ../tools/ksverdiff:80
+#, python-format
+msgid "The following commands were added in %s:"
+msgstr "다음 명령은 %s에 추가되었습니다: "
+
+#: ../tools/ksverdiff:106
+#, python-format
+msgid "The following options were added to the %s command in %s:"
+msgstr "다음 옵션은 %s에 있는 %s 명령에 추가되었습니다: "
+
+#: ../tools/ksverdiff:111
+#, python-format
+msgid "The following options were deprecated from the %s command in %s:"
+msgstr "다음 옵션은 %s에 있는 %s에서 삭제되었습니다: "
+
+#: ../tools/ksverdiff:116
+#, python-format
+msgid "The following options were removed from the %s command in %s:"
+msgstr "다음 옵션이 %s에 있는 %s 명령에서 제거되었습니다: "
+
+#: ../tools/ksvalidator:51
+msgid "filename or URL to read from"
+msgstr ""
+
+#: ../tools/ksvalidator:53
+msgid "halt after the first error or warning"
+msgstr "처음 오류 혹은 경고 후에 정지"
+
+#: ../tools/ksvalidator:56
+#, python-format
+msgid "parse include files when %%include is seen"
+msgstr ""
+
+#: ../tools/ksvalidator:75
+#, python-format
+msgid ""
+"Error reading %s:\n"
+"%s"
+msgstr "%s:\n%s 를 읽는중에 오류가 발생했습니다."
+
+#: ../tools/ksvalidator:97
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr "파일은 앞으로 삭제될 옵션이나 명령을 사용함.\n%s"
+
+#: ../tools/ksvalidator:103
+msgid "General kickstart error in input file"
+msgstr "입력 파일에서 일반적인 킥스타트 오류"
+
+#: ../tools/ksvalidator:106
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "입력 파일에서 일반적인 오류:  %s"
