@@ -44,7 +44,7 @@ echo áááááá
 
         # str(handler) should not cause traceback and should contain the
         # original unicode string as utf-8 encoded byte string
-        self.assertIn(encoded_str1 if not six.PY3 else unicode_str1, str(self.handler))
+        self.assertIn(encoded_str1 if not six.PY3 else str(encoded_str1), str(self.handler))
 
 if __name__ == "__main__":
     if not six.PY3:
