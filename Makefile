@@ -29,6 +29,11 @@ test:
 	@echo "*** Running unittests ***"
 	PYTHONPATH=. python $(TESTSUITE) -v
 
+test-python3:
+	@echo "*** Running unittests in Python 3***"
+	PYTHONPATH=. python3 $(TESTSUITE) -v
+
+
 coverage:
 	@which coverage || (echo "*** Please install python-coverage ***"; exit 2)
 	@echo "*** Running unittests with coverage ***"
